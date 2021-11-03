@@ -2,6 +2,8 @@ package loginforms;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.imageio.ImageIO;
 
@@ -25,7 +27,8 @@ public class login {
 	public WebElement password;
 	public WebElement submit;
 	public String desc;
-
+	public LocalDateTime myDate;
+	public DateTimeFormatter myDateObj;
 	@BeforeMethod
 	public void building_browser() throws InterruptedException {
 
@@ -34,6 +37,10 @@ public class login {
 		driver.get(baseUrl);
 		driver.manage().window().maximize();
 		Thread.sleep(500);
+		myDate = LocalDateTime.now();
+		myDateObj = DateTimeFormatter.ofPattern("HH:mm:ss");
+		String time = myDate.format(myDateObj);
+		System.out.println(time);
 
 	}
 
