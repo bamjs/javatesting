@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="loginforms.HomePage">
+      <class name="loginforms.Homepagelinks">
         <methods>
-          <include name="Getting_All_AnchorText_in_navbar"/>
           <include name="building_browser"/>
+          <include name="Log_out"/>
+          <include name="getting_All_Portals_Links"/>
         </methods>
-      </class> <!-- loginforms.HomePage -->
+      </class> <!-- loginforms.Homepagelinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

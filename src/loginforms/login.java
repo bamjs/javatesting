@@ -29,6 +29,7 @@ public class login {
 	public String desc;
 	public LocalDateTime myDate;
 	public DateTimeFormatter myDateObj;
+	public String time;
 	@BeforeMethod
 	public void building_browser() throws InterruptedException {
 
